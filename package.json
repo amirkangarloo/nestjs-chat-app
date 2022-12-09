@@ -1,6 +1,6 @@
 {
   "name": "nestjs-user-service",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "This is user service create by Nestjs and Postgres",
   "author": "Amir Kangarloo <https://github.com/amirkangarloo>",
   "private": true,
