@@ -1,10 +1,14 @@
 {
   "name": "nestjs-user-service",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "This is user service create by Nestjs and Postgres",
+  "author": "Amir Kangarloo <https://github.com/amirkangarloo>",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/amirkangarloo/nestjs-user-service"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
