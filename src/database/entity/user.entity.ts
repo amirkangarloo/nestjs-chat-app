@@ -3,10 +3,10 @@ import { BaseEntity } from "./base.entity";
 
 @Entity({ name: 'user' })
 export class UserEntity extends BaseEntity {
-    @Column()
+    @Column({ unique: true })
     username: string;
 
-    @Column()
+    @Column({ unique: true })
     email: string;
 
     @Column()
