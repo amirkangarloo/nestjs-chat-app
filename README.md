@@ -1,4 +1,4 @@
-# User service
+# NestJs Chat Server App
 
 ## License
 
