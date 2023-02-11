@@ -1,6 +1,6 @@
 {
   "name": "nestjs-chat-app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This is chat server-app create by Nestjs and Postgres",
   "author": "Amir Kangarloo <https://github.com/amirkangarloo>",
   "private": true,
