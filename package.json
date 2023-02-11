@@ -1,13 +1,13 @@
 {
-  "name": "nestjs-user-service",
+  "name": "nestjs-chat-app",
   "version": "0.1.0",
-  "description": "This is user service create by Nestjs and Postgres",
+  "description": "This is chat server-app create by Nestjs and Postgres",
   "author": "Amir Kangarloo <https://github.com/amirkangarloo>",
   "private": true,
   "license": "MIT",
   "repository": {
     "type": "github",
-    "url": "https://github.com/amirkangarloo/nestjs-user-service"
+    "url": "https://github.com/amirkangarloo/nestjs-chat-app"
   },
   "scripts": {
     "prebuild": "rimraf dist",
