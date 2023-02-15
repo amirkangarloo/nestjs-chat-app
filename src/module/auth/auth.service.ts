@@ -11,6 +11,7 @@ export class AuthService {
         try {
             const hash = await this.hashPassword(password);
             const user = await UserEntity.create({ email, username, password: hash }).save();
+            delete user.password;
             return user;
         } catch (error) {
             throw error;
