@@ -36,7 +36,7 @@ export class RegisterUserDto {
         minLength: 8,
         maxLength: 32,
         example: 'Amir1234*',
-        description: 'User lowercase, uppercase, number and symbol',
+        description: 'Use lowercase char, uppercase char, number and symbol',
     })
     @IsString()
     @MinLength(8)
