@@ -1,4 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
+import { Transform } from "class-transformer";
 import { IsEmail, IsNotEmpty, IsString, MinLength, MaxLength, Matches } from "class-validator";
 
 export class RegisterUserDto {
@@ -11,6 +12,7 @@ export class RegisterUserDto {
     })
     @IsEmail()
     @IsNotEmpty()
+    @Transform(({ value }) => value.toLowerCase())
     email: string;
     
     @ApiProperty({
@@ -23,6 +25,8 @@ export class RegisterUserDto {
     })
     @IsString()
     @MinLength(3)
+    @IsNotEmpty()
+    @Transform(({value}) => value.toLowerCase())
     username: string;
 
     @ApiProperty({
@@ -32,10 +36,11 @@ export class RegisterUserDto {
         minLength: 8,
         maxLength: 32,
         example: 'Amir1234*',
+        description: 'Use lowercase char, uppercase char, number and symbol',
     })
     @IsString()
     @MinLength(8)
     @MaxLength(32)
-    @Matches(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,32}$/, { message: 'password too weak' })
+    @Matches(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,32}$/, { message: 'password is too weak' })
     password: string;
 }

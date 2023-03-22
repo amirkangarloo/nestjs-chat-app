@@ -1,4 +1,4 @@
-import { Logger, ValidationPipe } from '@nestjs/common';
+import { Logger, ValidationPipe, VersioningType } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
@@ -13,10 +13,13 @@ async function bootstrap() {
       forbidNonWhitelisted: true
     }),
   );
+  app.enableVersioning({
+    type: VersioningType.URI,
+  });
   const config = new DocumentBuilder()
-  .setTitle('NestJs Chat Application')
-  .setDescription('API description')
-  .setVersion('1.0')
+  .setTitle('Chat Application')
+  .setDescription('Document for REST-API NestJs Chat Application')
+  .setVersion('v1')
   .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs-api', app, document);
