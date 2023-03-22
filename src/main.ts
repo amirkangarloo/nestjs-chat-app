@@ -17,9 +17,9 @@ async function bootstrap() {
     type: VersioningType.URI,
   });
   const config = new DocumentBuilder()
-  .setTitle('NestJs Chat Application')
-  .setDescription('API description')
-  .setVersion('1.0')
+  .setTitle('Chat Application')
+  .setDescription('Document for REST-API NestJs Chat Application')
+  .setVersion('v1')
   .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs-api', app, document);
