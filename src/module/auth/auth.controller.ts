@@ -9,7 +9,7 @@ export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
   @ApiResponse({ status: 201, description: 'create new user in DB' })
-  @ApiResponse({ status: 400, description: 'when email or username are exist' })
+  @ApiResponse({ status: 400, description: 'when email or username are exist or password is too weak' })
   @Post('register')
   public async register(@Body() body: RegisterUserDto) {
     return await this.authService.register(body);

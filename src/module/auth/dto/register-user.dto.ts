@@ -41,6 +41,6 @@ export class RegisterUserDto {
     @IsString()
     @MinLength(8)
     @MaxLength(32)
-    @Matches(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,32}$/, { message: 'password too weak' })
+    @Matches(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,32}$/, { message: 'password is too weak' })
     password: string;
 }
